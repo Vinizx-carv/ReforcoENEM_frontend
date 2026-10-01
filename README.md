@@ -1,2 +1,1 @@
-<<<<<<< HEAD
 # ReforcoENEM_frontend
