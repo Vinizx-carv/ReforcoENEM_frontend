@@ -7,7 +7,7 @@ type props = {
 
 export function Videoestudo({ assunto, videoId }: props) {
   return (
-    <div className="flex flex-col gap-3 border border-zinc-400 w-xl h-auto p-7 rounded-2xl">
+  <div className="flex flex-col gap-3 border w-xl min-h-1/4  justify-center p-6 rounded-2xl">
       <div className='flex gap-3'>
         <TvMinimalPlay/>
         <h1 className="">Video recomendado</h1>

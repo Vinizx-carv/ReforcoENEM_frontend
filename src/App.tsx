@@ -1,14 +1,42 @@
-import './App.css'
-import { Study } from './pages/Study.tsx'
-function App() {
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
 
+import { AppLayout } from "./layout/AppLayout";
 
+import { Dashboard } from "./pages/Dashboard";
+import { Questoes } from "./pages/Questoes";
+import { Study } from "./pages/Study";
+
+export default function App() {
   return (
-    <div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<AppLayout />}>
+          <Route
+            index
+            element={<Navigate to="/dashboard" replace />}
+          />
 
-      <Study nome='Porcentagem - Matemática para ENEM'/>
-    </div>
-  )
+          <Route
+            path="/dashboard"
+            element={<Dashboard />}
+          />
+
+          <Route
+            path="/Questoes"
+            element={<Questoes />}
+          />
+
+          <Route
+            path="/Study"
+            element={<Study />}
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App

@@ -1,17 +1,19 @@
+import { MaterialEstudo } from "../components/MaterialEstudo"
 import { Videoestudo } from "../components/Videoestudo"
 
-type props = {
-    nome: string
-}
 
-export function Study({nome}:props){
+
+
+export function Study(){
 
     return(
-        <div className="">
-            <div className="flex flex-col h-screen justify-center items-center">
+        <div className="bg-cyan-600 flex gap-5  h-screen justify-center w-4/5 my-30">
+            <div className="">
+                <MaterialEstudo assunto="Porcentagem"/>
+            </div>
+            <div className="">
                 <Videoestudo assunto="Porcentagem - Matemática para ENEM" videoId="N1xGtRHm2Dg?si=Q5L-vXRJt9GD4Pif"></Videoestudo>
             </div>
-            <p>Meu nome é {nome}</p>
         </div>
     )
 }
