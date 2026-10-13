@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Outlet } from "react-router-dom";
@@ -12,14 +13,14 @@ export function AppLayout() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 md:flex">
+    <div className="min-h-screen bg-gray-50">
       <Sidebar
         isOpen={isSidebarOpen}
         onClose={closeSidebar}
       />
 
-      <div className="min-w-0 flex-1">
-        <header className="flex h-16 items-center gap-3 border-b bg-white px-4 md:px-6">
+      <div className="min-w-0 md:ml-64">
+        <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b bg-white px-4 md:px-6">
           <button
             type="button"
             aria-label="Abrir menu"

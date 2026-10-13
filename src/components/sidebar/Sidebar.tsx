@@ -8,10 +8,7 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-export function Sidebar({
-  isOpen,
-  onClose,
-}: SidebarProps) {
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
   return (
     <>
       {/* Fundo escuro no mobile */}
@@ -31,21 +28,16 @@ export function Sidebar({
           "fixed inset-y-0 left-0 z-50 flex w-64 flex-col",
           "border-r border-gray-200 bg-white",
           "transition-transform duration-200",
-          "md:static md:z-auto md:translate-x-0",
+          "md:z-40 md:translate-x-0",
           isOpen ? "translate-x-0" : "-translate-x-full",
         ].join(" ")}
       >
         {/* Cabeçalho */}
         <div className="flex h-16 items-center justify-between border-b px-5">
           <div className="flex items-center gap-2">
-            <LayoutDashboard
-              size={24}
-              className="text-blue-600"
-            />
+            <LayoutDashboard size={24} className="text-blue-600" />
 
-            <span className="font-semibold text-gray-900">
-              Meu Sistema
-            </span>
+            <span className="font-semibold text-gray-900">Meu Sistema</span>
           </div>
 
           <button
@@ -61,19 +53,13 @@ export function Sidebar({
         {/* Navegação */}
         <nav className="flex-1 space-y-1 overflow-y-auto p-3">
           {sidebarItems.map((item) => (
-            <SidebarItem
-              key={item.path}
-              item={item}
-              onNavigate={onClose}
-            />
+            <SidebarItem key={item.path} item={item} onNavigate={onClose} />
           ))}
         </nav>
 
         {/* Rodapé */}
         <div className="border-t p-4">
-          <p className="text-xs text-gray-500">
-            Meu Sistema · v1.0
-          </p>
+          <p className="text-xs text-gray-500">Meu Sistema · v1.0</p>
         </div>
       </aside>
     </>

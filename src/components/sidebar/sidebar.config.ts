@@ -23,9 +23,9 @@ export const sidebarItems: SidebarItemData[] = [
     path: "/Questoes",
     icon: BookOpen,
   },
-  {
-    label: "Estudo",
-    path: "/Study",
+   {
+    label: "Estudar",
+    path: "/estudar",
     icon: BookOpen,
   },
   {
